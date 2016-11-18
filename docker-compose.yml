@@ -1,0 +1,10 @@
+teamcity-server:
+    build: 
+      teamcity-server
+    container_name:
+      teamcity-server
+    ports:
+      - "8111:8111" 
+    volumes:
+      - /home/ubuntu/ts-data:/data/teamcity_server/datadir
+      - /home/ubuntu/ts-logs:/opt/teamcity/logs
