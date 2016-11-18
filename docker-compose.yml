@@ -6,5 +6,6 @@ teamcity-server:
     ports:
       - "8111:8111" 
     volumes:
-      - /home/ubuntu/ts-data:/data/teamcity_server/datadir
-      - /home/ubuntu/ts-logs:/opt/teamcity/logs
+      - ./ts-data:/data/teamcity_server/datadir
+      - ./ts-logs:/opt/teamcity/logs
+    restart: always
