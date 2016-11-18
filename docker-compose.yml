@@ -9,3 +9,5 @@ teamcity-server:
       - ./ts-data:/data/teamcity_server/datadir
       - ./ts-logs:/opt/teamcity/logs
     restart: always
+    environment: 
+      - TEAMCITY_SERVER_MEM_OPTS=-Xmx2g -XX:MaxPermSize=270m -XX:ReservedCodeCacheSize=350m
